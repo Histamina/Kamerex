@@ -1,0 +1,19 @@
+nav {
+    ul {
+        display: flex;
+        justify-content: space-evenly;
+        margin: 0;
+        background-color: #DB970F;
+        list-style: none;
+        padding: 1rem 2rem;
+        .activeLink {
+            background-color: #c98b0f;
+            padding: 1rem 2rem;
+        }
+        a {
+            text-decoration: none;
+            color: #fafafa;
+            font-size: 1.3rem;
+        }
+    }
+}

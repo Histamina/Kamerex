@@ -1,23 +1,27 @@
 import React from 'react';
+import NavBar from './Components/NavBar/NavBar';
 import './App.css';
+import './Assets/scss/styles.scss'
+import { BrowserRouter, Route } from 'react-router-dom';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <body>
+    <BrowserRouter>
+      <NavBar />
+      <switch>
+        <Route exact path="/">
+          <span className="inner-text"></span>
+        </Route>
+        <Route exact path="/products">
+          <span className="inner-text"></span>
+        </Route>
+        <Route exact path="/cart">
+          <span className="inner-text"></span>
+        </Route>
+      </switch>
+    </BrowserRouter>
+    </body>
   );
 }
 
