@@ -1,20 +1,23 @@
 nav {
     ul {
         display: flex;
+        align-items: center;
         justify-content: space-evenly;
         margin: 0;
         background-color: #DB970F;
         list-style: none;
+        padding: 0;
         li {
-            &:hover, .activeLink{
-                background-color: #c98b0f;
-            }
+            display: block;
             a {
                 display: block;
                 text-decoration: none;
                 color: #fafafa;
                 font-size: 1.3rem;
                 padding: 18px 28px;
+                &:hover, &.activeLink{
+                    background-color: #c98b0f;
+                }
             }
         }
     }

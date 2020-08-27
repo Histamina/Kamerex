@@ -1,6 +1,7 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import './NavBar.scss';
+import CartIcon from '../Icons/CartIcon';
 
 
 function NavBar() {
@@ -19,7 +20,7 @@ function NavBar() {
                 </li>
                 <li>
                     <NavLink exact to="/cart" activeClassName="activeLink" className="main-nav">
-                        Cart
+                        <CartIcon />
                     </NavLink>
                 </li>
             </ul>

@@ -1,8 +1,9 @@
 import React from 'react';
 import NavBar from './Components/NavBar/NavBar';
 import './App.css';
-import './Assets/scss/styles.scss'
+import './Assets/scss/styles.scss';
 import { BrowserRouter, Route } from 'react-router-dom';
+import Greetings from './Components/Home/Home';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
           <span className="inner-text"></span>
         </Route>
       </switch>
+      <Greetings name="Julieta" lastName="Gomez"></Greetings>
     </BrowserRouter>
     </body>
   );
