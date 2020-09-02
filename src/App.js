@@ -4,6 +4,7 @@ import './App.css';
 import './Assets/scss/styles.scss';
 import { BrowserRouter, Route } from 'react-router-dom';
 import Greetings from './Components/Home/Home';
+import Counter from './Components/Counter/Counter';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
         </Route>
       </switch>
       <Greetings name="Julieta" lastName="Gomez"></Greetings>
+      <Counter />
     </BrowserRouter>
     </body>
   );
