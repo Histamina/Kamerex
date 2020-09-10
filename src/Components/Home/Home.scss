@@ -1,5 +1,27 @@
-.row-style {
-    border: rgb(206, 206, 206) 1px solid;
-    border-radius: 5px;
-    background-color: rgb(224, 224, 224);
+@import url('https://fonts.googleapis.com/css2?family=Bitter:wght@500&family=Montserrat&display=swap');
+$main-font: 'Bitter', serif;
+$second-font: 'Montserrat', sans-serif;
+
+.home-wrapper {
+    position: relative;
+    .greeting-style {
+        position: absolute;
+        top: 8rem;
+        left: 0;
+        right: 0;
+        // border: rgb(65, 65, 65) 1px solid;
+        // border-radius: 5px;
+        background-color: rgba(0, 0, 0, 0.9);
+        h1 {
+            font-family: ($main-font);
+            font-size: 4rem;
+            color: rgb(238, 238, 238);
+            letter-spacing: 3px;
+        }
+        h2 {
+            font-family: ($second-font);
+            font-size: 5.3rem;
+            color: rgb(143, 143, 143);
+        }
+    }
 }

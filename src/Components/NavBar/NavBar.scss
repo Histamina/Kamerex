@@ -1,10 +1,11 @@
 nav {
+    margin: 0;
     ul {
         display: flex;
         align-items: center;
         justify-content: space-evenly;
         margin: 0;
-        background-color: #DB970F;
+        background-color: #c58608;
         list-style: none;
         padding: 0;
         li {
@@ -16,7 +17,7 @@ nav {
                 font-size: 1.3rem;
                 padding: 18px 28px;
                 &:hover, &.activeLink{
-                    background-color: #c98b0f;
+                    background-color: #a7740e;
                 }
             }
         }
