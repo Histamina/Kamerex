@@ -35,7 +35,8 @@ class Counter extends React.Component {
     render() {
         return (
             <>
-                <input className="card-inputValue d-flex mx-auto my-4" type="number"  min="0" max="15" onChange={this.onAdd} value={this.state.counter} />
+                <h5 className="text-center title-style">Add to cart</h5>
+                <input className="card-inputValue d-flex mx-auto my-3" type="number"  min="0" max="15" onChange={this.onAdd} value={this.state.counter} />
                 <div className="button-Wrapper d-flex justify-content-center">
                     <button type="button" className="btn btn-warning d-inline-block mx-3 button-style" onClick={this.increment}>+</button>
                     <button type="button" className="btn btn-warning d-inline-block mx-3 button-style decrement-button" onClick={this.decrement}>-</button>

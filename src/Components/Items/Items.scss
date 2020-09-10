@@ -1,3 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Bitter:wght@500&family=Montserrat&display=swap');
+$main-font: 'Bitter', serif;
+$second-font: 'Montserrat', sans-serif;
+
 li {
     list-style-type: none;
+    .card-title {
+        font-family: ($main-font);
+        font-size: 1.5rem;
+    }
+    p {
+        font-family: ($second-font);
+        font-size: 0.9rem;
+    }
 }

@@ -5,13 +5,13 @@ import './Items.scss';
 
 const Items = (props) => {
     return(
-        <div className="container-fluid mt-5">
+        <div className="container mt-5">
             <div className="row no-gutters justify-content-center">    
-                    <ul className="row-products d-flex flex-row justify-content-between">
+                    <ul className="row-products p-0 d-flex flex-row justify-content-between">
                         {props.list.map(product =>
-                            <li key={product.id} className="col-3">
+                            <li key={product.id} className="col-md-3">
                                 <div className="card">
-                                    <img src={product.img} className="card-img-top img-fluid shadow border" height="250" alt="Camera Product"></img>
+                                    <img src={product.img} className="card-img-top img-fluid shadow border" alt="Camera Product"/>
                                     <div class="card-body">
                                         <h5 class="card-title">{product.name}</h5>
                                         <p class="card-text"> Stock: {product.stock}</p>

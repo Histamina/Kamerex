@@ -1,10 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Bitter:wght@500&family=Montserrat&display=swap');
+$second-font: 'Montserrat', sans-serif;
+
+.title-style {
+    font-family: ($second-font);
+    font-weight: bolder;
+    font-size: 1.2rem;
+}
 .button-style {
     color: rgb(255, 255, 255);
     font-size: 1.5rem;
     font-weight: bold;
-    padding: 0.5rem 1.2rem;
+    padding: 0.2rem 0.9rem;
 }
 
 .decrement-button {
-    padding: 0.5rem 1.4rem;
+    padding: 0.2rem 1.1rem;
 }
