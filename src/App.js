@@ -2,7 +2,7 @@ import React from 'react';
 import NavBar from './Components/NavBar/NavBar';
 import './App.css';
 import './Assets/scss/styles.scss';
-import { BrowserRouter, Route } from 'react-router-dom';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Greetings from './Components/Home/Home';
 import ItemsList from './Components/Items/ItemsList';
 
@@ -11,20 +11,19 @@ function App() {
     <>
       <BrowserRouter>
         <NavBar />
-        <switch>
+        <Switch>
           <Route exact path="/">
-            <span className="inner-text"></span>
+            <Greetings range="Tutor" name="JUAN"></Greetings>
+            <ItemsList />
           </Route>
           <Route exact path="/products">
-            <span className="inner-text"></span>
+            <ItemsList />
           </Route>
           <Route exact path="/cart">
             <span className="inner-text"></span>
           </Route>
-        </switch>
+        </Switch>
       </BrowserRouter>
-      <Greetings range="Tutor" name="JUAN"></Greetings>
-      <ItemsList />
   </>
   );
 }

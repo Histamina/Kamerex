@@ -12,9 +12,9 @@ const Items = (props) => {
                             <li key={product.id} className="col-md-3">
                                 <div className="card">
                                     <img src={product.img} className="card-img-top img-fluid shadow border" alt="Camera Product"/>
-                                    <div class="card-body">
-                                        <h5 class="card-title">{product.name}</h5>
-                                        <p class="card-text"> Stock: {product.stock}</p>
+                                    <div className="card-body">
+                                        <h5 className="card-title">{product.name}</h5>
+                                        <p className="card-text"> Stock: {product.stock}</p>
                                     </div>
                                     <ul className="list-group list-group-flush">
                                         <li className="list-group-item">
