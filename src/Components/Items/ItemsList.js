@@ -51,7 +51,7 @@ const ItemsList = () => {
     if(loading) {
         return (
             <div className="container text-center py-3">
-                <Icon path= { mdiLoading } className="mdi-spin" spin size="45px" />
+                <Icon path= { mdiLoading } className="mdi-spin" spin size="50px" />
             </div>
         );
     } else if(error) {
