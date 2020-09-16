@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Bitter:wght@500&family=Montserrat&display=swap');
+$main-font: 'Bitter', serif;
+$second-font: 'Montserrat', sans-serif;
+
+
+.details-wrapper {
+    background-color: rgb(224, 224, 224);
+    h3 {
+        font-family: ($main-font);
+        font-size: 4rem;
+    }
+    p {
+        font-family: ($second-font);
+    }
+    Counter {
+        flex-direction: column;
+    }
+}

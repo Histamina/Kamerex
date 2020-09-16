@@ -9,8 +9,6 @@ $second-font: 'Montserrat', sans-serif;
         top: 8rem;
         left: 0;
         right: 0;
-        // border: rgb(65, 65, 65) 1px solid;
-        // border-radius: 5px;
         background-color: rgba(0, 0, 0, 0.9);
         h1 {
             font-family: ($main-font);
@@ -22,6 +20,17 @@ $second-font: 'Montserrat', sans-serif;
             font-family: ($second-font);
             font-size: 5.3rem;
             color: rgb(143, 143, 143);
+        }
+    }
+    .phrase-style {
+        position: absolute;
+        left: 70%;
+        top: 42%;
+        p {
+            font-family: ($main-font);
+            color: rgb(128, 128, 128);
+            font-style: italic;
+            letter-spacing: 1px;
         }
     }
 }

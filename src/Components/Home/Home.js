@@ -12,6 +12,9 @@ const Greetings = (props) => {
                         <h1>Welcome</h1>
                         <h2>{props.range} {props.name}</h2>
                     </div>
+                    <div className="col-md-3 text-center phrase-style">
+                        <p>"You can find pictures anywhere.<br></br> It’s simply a matter of noticing things and organizing them."</p>
+                    </div>
                 </div>
             </div>
             

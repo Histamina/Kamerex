@@ -2,14 +2,25 @@
 $main-font: 'Bitter', serif;
 $second-font: 'Montserrat', sans-serif;
 
+.img-wrapper {
+    position: relative;
+    h2 {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 1%;
+        margin: auto;
+        font-family: ($main-font);
+        font-size: 4rem;
+        letter-spacing: 1px;
+        color: rgb(101, 110, 102);
+    }
+}
+
 li {
     list-style-type: none;
     .card-title {
         font-family: ($main-font);
-        font-size: 1.5rem;
-    }
-    p {
-        font-family: ($second-font);
-        font-size: 0.9rem;
+        font-size: 2rem;
     }
 }

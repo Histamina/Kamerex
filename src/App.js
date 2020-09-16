@@ -5,6 +5,7 @@ import './Assets/scss/styles.scss';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Greetings from './Components/Home/Home';
 import ItemsList from './Components/Items/ItemsList';
+import ItemsListLoading from './Components/Items/ItemDetailContainer';
 
 function App() {
   return (
@@ -13,11 +14,11 @@ function App() {
         <NavBar />
         <Switch>
           <Route exact path="/">
-            <Greetings range="Tutor" name="JUAN"></Greetings>
+            <Greetings range="Tutor" name="JUAN"/>
             <ItemsList />
           </Route>
           <Route exact path="/products">
-            <ItemsList />
+            <ItemsListLoading />
           </Route>
           <Route exact path="/cart">
             <span className="inner-text"></span>

@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import Items from './Items';
-import { Icon } from '@mdi/react';
+import Item from './Items';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { mdiLoading } from '@mdi/js';
 import fujifilmCamera from './fujifilmCamera.jpg';
 import nikonCamera from './nikonCamera.jpg';
 import canonCamera from './canonCamera.jpg';
@@ -36,7 +34,6 @@ const productsList = [
 ];
 
 const ItemsList = () => {
-    const [loading, setLoading] = useState(true);
     const [products, setProducts] = useState([]);
     const [error, setError] = useState('');
 
@@ -44,17 +41,10 @@ const ItemsList = () => {
         const getProducts = 
             new Promise((resolve, reject) => setTimeout(() => resolve(productsList), 2000))
                 .then((products) => setProducts(products))
-                .catch((error) => setError(error))
-                .finally(data => setLoading(false));
+                .catch((error) => setError(error));
     }, []);
 
-    if(loading) {
-        return (
-            <div className="container text-center py-3">
-                <Icon path= { mdiLoading } className="mdi-spin" spin size="50px" />
-            </div>
-        );
-    } else if(error) {
+    if(error) {
         return (
             <div className="container text-center py-4">
                 <p> Looks like there's an error {error}</p>
@@ -62,7 +52,7 @@ const ItemsList = () => {
         );
     } else {
         return(
-            <Items list={products} />
+            <Item list={products} />
         );
     }
 };

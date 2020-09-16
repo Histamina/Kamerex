@@ -1,32 +1,32 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Counter from '../Counter/Counter'; 
 import './Items.scss';
+import lens from './lens.jpg';
 
 const Items = (props) => {
     return(
-        <div className="container mt-5">
-            <div className="row no-gutters justify-content-center">    
-                    <ul className="row-products p-0 d-flex flex-row justify-content-between">
+        <div className="container-fluid mt-5 p-0">
+            <div className="row no-gutters justify-content-center">
+                <div className="img-wrapper col-md-4">
+                    <img src={lens} className="img-fluid" alt="Lens product background" />
+                    <h2 className="text-center">Our Cameras</h2>
+                </div>
+                <div className="cameras-wrapper d-flex align-items-center col-md-8">
+                    <ul className="row-products p-0 m-0 d-flex justify-content-between">
                         {props.list.map(product =>
                             <li key={product.id} className="col-md-3">
                                 <div className="card">
                                     <img src={product.img} className="card-img-top img-fluid shadow border" alt="Camera Product"/>
                                     <div className="card-body">
-                                        <h5 className="card-title">{product.name}</h5>
-                                        <p className="card-text"> Stock: {product.stock}</p>
+                                        <h5 className="card-title text-center">{product.name}</h5>
                                     </div>
-                                    <ul className="list-group list-group-flush">
-                                        <li className="list-group-item">
-                                            <Counter />
-                                        </li>
-                                    </ul>
                                 </div>
                             </li>
                         )}
                     </ul>
                 </div>
             </div>
+        </div>
     );
 };
 
