@@ -23,7 +23,7 @@ function App() {
             <ItemsListLoading />
           </Route>
           <Route exact path="/cart">
-            <span className="inner-text">Carrito de compras</span>
+            <span className="inner-text">Shopping cart</span>
           </Route>
         </Switch>
       </BrowserRouter>
