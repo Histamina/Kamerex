@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { useParams } from 'react-router-dom';
 import { Icon } from '@mdi/react';
 import { mdiLoading } from '@mdi/js';
 import fujifilmCamera from './fujifilmCamera.jpg';
@@ -42,18 +43,19 @@ const ItemsListLoading = () => {
     const [loading, setLoading] = useState(true);
     const [product, setProduct] = useState([]);
     const [error, setError] = useState('');
+    const {id} = useParams();
 
     useEffect(() => {
         const details = 
-            new Promise((resolve, reject) => setTimeout(() => resolve(productsList[0]) , 3000))
-            .then((response) => setProduct(response))
+            new Promise((resolve, reject) => setTimeout(() => resolve(productsList), 3000))
+            .then((response) => setProduct(response[id - 1]))
             .catch((error) => setError(error))
             .finally((data) => setLoading(false));
     }, []);
 
     if(loading) {
         return (
-            <div className="container text-center py-5">
+            <div className="container text-center py-5 mt-5">
                 <Icon path= { mdiLoading } className="mdi-spin" spin size="55px" />
             </div>
         );

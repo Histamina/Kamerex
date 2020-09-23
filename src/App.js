@@ -15,13 +15,15 @@ function App() {
         <Switch>
           <Route exact path="/">
             <Greetings range="Tutor" name="JUAN"/>
-            <ItemsList />
           </Route>
           <Route exact path="/products">
+            <ItemsList />
+          </Route>
+          <Route exact path="/products/:id">
             <ItemsListLoading />
           </Route>
           <Route exact path="/cart">
-            <span className="inner-text"></span>
+            <span className="inner-text">Carrito de compras</span>
           </Route>
         </Switch>
       </BrowserRouter>

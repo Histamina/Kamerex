@@ -45,7 +45,7 @@ const ItemsList = () => {
     }, []);
 
     if(error) {
-        return (
+        return(
             <div className="container text-center py-4">
                 <p> Looks like there's an error {error}</p>
             </div>

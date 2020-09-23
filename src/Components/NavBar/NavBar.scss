@@ -1,25 +1,17 @@
-// nav {
-//     margin: 0;
-//     ul {
-//         display: flex;
-//         align-items: center;
-//         justify-content: space-evenly;
-//         margin: 0;
-//         background-color: #c58608;
-//         list-style: none;
-//         padding: 0;
-//         li {
-//             display: block;
-//             a {
-//                 display: block;
-//                 text-decoration: none;
-//                 color: #fafafa;
-//                 font-size: 1.3rem;
-//                 padding: 18px 28px;
-//                 &:hover, &.activeLink{
-//                     background-color: #a7740e;
-//                 }
-//             }
-//         }
-//     }
-// }
+@import url('https://fonts.googleapis.com/css2?family=Bitter:wght@500&family=Montserrat&display=swap');
+$main-font: 'Bitter', serif;
+$second-font: 'Montserrat', sans-serif;
+
+nav {
+    p {
+        font-family: ($second-font);
+        letter-spacing: 1px;
+    }
+    ul {
+        text-transform: uppercase;
+        font-family: ($second-font); 
+        a {
+            color: #ffffff;
+        }
+    }
+}
