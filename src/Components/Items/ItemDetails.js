@@ -4,6 +4,7 @@ import Counter from '../Counter/Counter';
 import './ItemDetails.scss';
 
 
+
 const ItemDetails = (props) => {
     return(
         <div className="container-fluid my-5">
@@ -17,12 +18,7 @@ const ItemDetails = (props) => {
                         <p className="mx-1">{props.description}</p>
                         <p className="mb-0">Stock: {props.stock}</p>
                         <div className="d-flex justify-content-around">
-                            <div>
-                                <Counter />
-                            </div>
-                            <div className="d-flex align-items-center">
-                                <button type="button" className="btn btn-success btn-lg px-4">BUY</button>
-                            </div>
+                            <Counter initial={1} min={1} max={props.stock} id={props.id} />
                         </div>
                     </div>
                 </div>
