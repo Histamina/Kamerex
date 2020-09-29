@@ -3,23 +3,26 @@ import './Counter.scss';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import AddToCart from '../Counter/AddToCart';
 
-const Counter = ({id, initial, min, max}) => {
+const Counter = ({ initial, min, max, setCount = () => {} }) => {
     const [counter, setCounter] = useState(initial);
     
     const increment = () => {
         if(counter < max) {
-        setCounter(counter + 1);
+            setCounter(counter + 1);
+            setCount(counter + 1);
         }
     };
     const decrement = () => {
         if(counter > min) {
             setCounter(counter - 1);
+            setCount(counter - 1);
         }
     };
 
     const onAdd = (event) => {
         let counter = event.target.value;
-        setCounter({counter}); 
+        setCounter({counter});
+        setCount(counter); 
     };
 
     
@@ -33,9 +36,6 @@ const Counter = ({id, initial, min, max}) => {
                     <button type="button" className="btn btn-warning d-inline-block mx-3 button-style decrement-button" onClick={decrement}>-</button>
                 </div>
             </div>    
-            <div className="d-flex align-items-center">
-                <AddToCart counter={counter} />
-            </div>
         </>
     );
 };

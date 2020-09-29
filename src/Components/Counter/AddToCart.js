@@ -4,7 +4,7 @@ import React, { useContext } from 'react';
 
 const AddToCart = ({id, counter}) => {
     return(
-        <button type="button" className="btn btn-success btn-lg px-4" >Add To Cart ({counter})</button> 
+        <button type="button" className="btn btn-success btn-lg px-4" id={id}>Add To Cart ({counter})</button> 
     );
 };
 
