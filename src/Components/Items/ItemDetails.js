@@ -3,8 +3,6 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Counter from '../Counter/Counter';
 import './ItemDetails.scss';
 
-
-
 const ItemDetails = (props) => {
     return(
         <div className="container-fluid my-5">

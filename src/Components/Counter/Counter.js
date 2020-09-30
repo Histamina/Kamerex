@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import './Counter.scss';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import AddToCart from '../Counter/AddToCart';
@@ -19,13 +19,13 @@ const Counter = ({id, initial, min, max}) => {
 
     const onAdd = (event) => {
         let counter = event.target.value;
-        setCounter({counter}); 
+        setCounter({counter});
     };
 
     
     return (
         <>
-            <div className="flex flex-column">
+            <div className="d-flex flex-column">
                 <h5 className="text-center title-style">Add to cart</h5>
                 <input className="card-inputValue d-flex mx-auto my-3" type="number"  min="0" max="15" onChange={onAdd} value={counter} />
                 <div className="button-Wrapper d-flex justify-content-center">
@@ -34,7 +34,7 @@ const Counter = ({id, initial, min, max}) => {
                 </div>
             </div>    
             <div className="d-flex align-items-center">
-                <AddToCart counter={counter} />
+                <AddToCart counter={counter} id={id} />
             </div>
         </>
     );
