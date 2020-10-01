@@ -1,6 +1,6 @@
-import React, { useState } from 'react'; 
+import React, { useEffect, useState } from 'react'; 
 
-export const CartContext = React.createContext([]);
+export const CartContext = React.createContext();
 
 export const CartProvider = ({ children }) => {
     const [cart, setCart] = useState([]);
@@ -13,47 +13,11 @@ export const CartProvider = ({ children }) => {
                 quantity: quantity
             }
         ]);
-        console.log(cart);
     };
-    
 
     return(
-        <CartContext.Provider value={ {addProduct} }>
+        <CartContext.Provider value={ { addProduct, cart } }>
             { children }
         </CartContext.Provider>
     );
 };
-
-
-
-
-
-
-/* CONTEXT BY LUKS */
-
-// import React, {useState, createContext} from 'react'; 
-
-// export const CartContext = React.createContext();
-
-// export function CartProvider({children}) {
-
-//     const [products, setProducts] = useState([]);
-
-//     const addProduct = (id, quantity) => {
-        
-//         setProducts([
-//             ...products,
-//             {
-//                 id: id,
-//                 quantity: quantity
-//             }
-//         ])
-//         console.log(products);
-//     }
-
-//     return (
-//         <CartContext.Provider value={{ addProduct }}>
-//             {children}
-//         </CartContext.Provider>
-//     );
-// }

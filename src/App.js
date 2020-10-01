@@ -13,23 +13,23 @@ function App() {
   return (
     <>
       <BrowserRouter>
-        <NavBar />
-        <Switch>
-          <Route exact path="/">
-            <Greetings range="Tutor" name="JUAN"/>
-          </Route>
-          <Route exact path="/products">
-            <ItemsList />
-          </Route>
-          <CartProvider>
-            <Route exact path="/products/:id">
-              <ItemsListLoading />
+        <CartProvider>
+          <NavBar />
+          <Switch>
+            <Route exact path="/">
+              <Greetings range="Tutor" name="JUAN"/>
             </Route>
-            <Route exact path="/cart">
-              <Cart />
+            <Route exact path="/products">
+              <ItemsList />
             </Route>
-          </CartProvider>
-        </Switch>
+              <Route exact path="/products/:id">
+                <ItemsListLoading />
+              </Route>
+              <Route exact path="/cart">
+                <Cart />
+              </Route>
+          </Switch>
+        </CartProvider>
       </BrowserRouter>
   </>
   );
