@@ -25,7 +25,7 @@ const ItemDetails = (props) => {
                                 <Counter initial={itemCount} min={1} max={props.stock} setCount={setItemCount} />
                             </div>
                             <div className="d-flex align-items-center">
-                                <AddToCart id={props.id} counter={itemCount} />
+                                <AddToCart id={props.id} counter={itemCount} img={props.img} description={props.description} name={props.name} />
                             </div>
                         </div>
                     </div>
