@@ -18,7 +18,7 @@ export const CartProvider = ({ children }) => {
         ]);
     };
 
-    useEffect(() => console.log(cart) , [cart]);
+    // useEffect(() => console.log(cart) , [cart]);
 
     return(
         <CartContext.Provider value={ { addProduct, cart } }>

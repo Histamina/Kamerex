@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import { Icon } from '@mdi/react';
-import { mdiLoading } from '@mdi/js';
+import Loader from '../Loading/Loader';
 import fujifilmCamera from './fujifilmCamera.jpg';
 import nikonCamera from './nikonCamera.jpg';
 import canonCamera from './canonCamera.jpg';
@@ -53,23 +52,13 @@ const ItemsListLoading = () => {
             .finally((data) => setLoading(false));
     }, []);
 
-    if(loading) {
-        return (
-            <div className="container text-center py-5 mt-5">
-                <Icon path= { mdiLoading } className="mdi-spin" spin size="55px" />
-            </div>
-        );
-    } else if(error) {
-        return (
-            <div className="container text-center py-4">
-                <p>Looks like there's an error: {error}</p>
-            </div>
-        );
-    } else {
-        return (
-            <ItemDetails {...product} />
-        );
-    }
+    return(
+        <>
+            { loading ? <Loader /> : <ItemDetails {...product} /> }
+        </>
+    );
 };
 
 export default ItemsListLoading;
+
+        
