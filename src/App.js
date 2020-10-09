@@ -22,16 +22,16 @@ function App() {
             <Route exact path="/products">
               <ItemsList />
             </Route>
-              <Route exact path="/products/:id">
-                <ItemsListLoading />
-              </Route>
-              <Route exact path="/cart">
-                <Cart />
-              </Route>
+            <Route exact path="/products/:id">
+              <ItemsListLoading />
+            </Route>
+            <Route exact path="/cart">
+              <Cart />
+            </Route>
           </Switch>
         </CartProvider>
       </BrowserRouter>
-  </>
+    </>
   );
 }
 

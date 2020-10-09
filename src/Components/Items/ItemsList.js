@@ -1,60 +1,40 @@
 import React, { useEffect, useState } from 'react';
 import Item from './Items';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import fujifilmCamera from './fujifilmCamera.jpg';
-import nikonCamera from './nikonCamera.jpg';
-import canonCamera from './canonCamera.jpg';
-import leicaCamera from './leicaCamera.jpeg';
-
-const productsList = [
-    {
-        id: 1,
-        name: 'Canon',
-        img: canonCamera,
-        stock: 23
-    },
-    {
-        id: 2,
-        name: 'Nikon',
-        img: nikonCamera,
-        stock: 65
-    },
-    {
-        id: 3,
-        name: 'Fujifilm',
-        img: fujifilmCamera,
-        stock: 14
-    },
-    {
-        id: 4,
-        name: 'Leica',
-        img: leicaCamera,
-        stock: 9
-    }
-];
+import Loader from '../Loading/Loader';
+import { getFirestore } from '../../Firebase';
 
 const ItemsList = () => {
     const [products, setProducts] = useState([]);
+    const [loading, setLoading] = useState(false);
     const [error, setError] = useState('');
 
     useEffect(() => {
-        const getProducts = 
-            new Promise((resolve, reject) => setTimeout(() => resolve(productsList), 2000))
-                .then((products) => setProducts(products))
-                .catch((error) => setError(error));
-    }, []);
+        setLoading(true);
+        const db = getFirestore();
+        const itemCollection = db.collection('items');
+        itemCollection.get()
+        .then((querySnapShot) => {
+            if (querySnapShot.size === 0) {
+                console.log('No results!');
+            }
+            setProducts(querySnapShot.docs.map(doc => {
+                return ({id: doc.id, ...doc.data() });
+            }));
+        }).catch((error) => {
+            console.log('Error serching Items', error);
+            setError(error);
+        }).finally(() => {
+            setLoading(false);
+        })
+        }, []);
+    
 
-    if(error) {
-        return(
-            <div className="container text-center py-4">
-                <p> Looks like there's an error {error}</p>
-            </div>
-        );
-    } else {
-        return(
-            <Item list={products} />
-        );
-    }
+    return(
+        <>
+            { loading ? <Loader /> : <Item list={products} />}
+        </>
+    );
 };
 
 export default ItemsList;

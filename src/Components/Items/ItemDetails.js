@@ -19,6 +19,7 @@ const ItemDetails = (props) => {
                             <h3>{props.name}</h3>
                             <p className="mx-2">{props.description}</p>
                             <p className="mb-0">Stock: {props.stock}</p>
+                            <p className="mb-0">Price: {props.price}</p>
                         </div>
                         <div className="d-flex justify-content-around">
                             <div className="d-flex justify-content-around">
