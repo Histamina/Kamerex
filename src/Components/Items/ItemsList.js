@@ -29,7 +29,6 @@ const ItemsList = () => {
         })
         }, []);
     
-
     return(
         <>
             { loading ? <Loader /> : <Item list={products} />}
