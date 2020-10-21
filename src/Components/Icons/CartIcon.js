@@ -2,7 +2,7 @@ import React, { useContext, useState } from 'react';
 import { Icon } from '@mdi/react';
 import {mdiCart} from '@mdi/js';
 import './CartIcon.scss';
-import {CartContext} from '../../Contexts/cartContext'
+import {CartContext} from '../../Contexts/cartContext';
 
 const CartIcon = ({ quantity }) => {
     const { cart } = useContext(CartContext);

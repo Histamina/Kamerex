@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Bitter:wght@500&family=Montserrat&display=swap');
+$main-font: 'Bitter', serif;
+$second-font: 'Montserrat', sans-serif;
+
+
+.instagram-icon, .whatsapp-icon, .twitter-icon {
+    $size: 3rem;
+    color: #fafafa;
+    height: $size;
+    width: $size;
+}
+
+.footer-text {
+    font-size: 2rem;
+    color: #fafafa;
+    font-family: ($second-font);
+}

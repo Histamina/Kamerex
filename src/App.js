@@ -8,6 +8,7 @@ import ItemsList from './Components/Items/ItemsList';
 import ItemsListLoading from './Components/Items/ItemDetailContainer';
 import { CartProvider } from './Contexts/cartContext';
 import Cart from './Components/Cart/Cart';
+import Footer from './Components/Footer/Footer'
 
 function App() {
   return (
@@ -19,16 +20,18 @@ function App() {
             <Route exact path="/">
               <Greetings range="Tutor" name="JUAN"/>
             </Route>
-            <Route exact path="/products">
+            <Route exact path="/categories/:id">
               <ItemsList />
             </Route>
             <Route exact path="/products/:id">
-              <ItemsListLoading />
+              <ItemsList />
+              {/* <ItemsListLoading /> */}
             </Route>
             <Route exact path="/cart">
               <Cart />
             </Route>
           </Switch>
+          <Footer />
         </CartProvider>
       </BrowserRouter>
     </>

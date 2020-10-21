@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 
 const Items = (props) => {
     return(
-        <div className="container-fluid mt-5 p-0">
+        <div className="container-fluid content-wrapper">
             <div className="row no-gutters justify-content-center">
                 <div className="img-wrapper col-md-4">
                     <img src={lens} className="img-fluid" alt="Lens product background" />

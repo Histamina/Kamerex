@@ -4,6 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './NavBar.scss';
 import CartIcon from '../Icons/CartIcon';
 import obturadorLogo from './obturadorLogo.png';
+import Dropdown from './Dropdown';
 
 
 const NavBar = () => {
@@ -17,16 +18,14 @@ const NavBar = () => {
                 <span className="navbar-toggler-icon"></span>
             </button>
             <div className="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul className="navbar-nav ml-auto">
+                <ul className="navbar-nav ml-auto align-items-center">
                     <li className="nav-item active mx-5">
                         <NavLink exact to="/" activeClassName="activeLink" className="main-nav">
                             Home
                         </NavLink>
                     </li>
                     <li className="nav-item mx-5">
-                        <NavLink exact to="/products" activeClassName="activeLink" className="main-nav">
-                            Products
-                        </NavLink>
+                        <Dropdown />
                     </li>
                     <li className="nav-item mx-5">
                         <NavLink exact to="/cart" activeClassName="activeLink" className="main-nav">
