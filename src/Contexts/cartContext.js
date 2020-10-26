@@ -1,15 +1,13 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import * as firebase from 'firebase/app';
 import 'firebase/firestore';
 import { getFirestore } from '../Firebase';
-import userInfo from '../Components/Cart/UserInfo';
 
 export const CartContext = React.createContext();
 
 export const CartProvider = ({ children }) => {
     
     const [cart, setCart] = useState([]);
-
     const addProduct = (id, quantity, img, description, name, price) => {
         setCart([
             ...cart,
@@ -24,10 +22,18 @@ export const CartProvider = ({ children }) => {
         ]);
     };
 
-    // useEffect(() => console.log(cart) , [cart]);
+    const [user, setUser] = useState({});
+    const userData = (name, lastName, email) => {
+        setUser(
+            {
+                name: name, 
+                lastName: lastName,
+                email: email
+            }
+        );
+    };
 
     const [order, setOrder] = useState({});
-
     const createOrder = () => {
         let total = 0;
     
@@ -38,14 +44,13 @@ export const CartProvider = ({ children }) => {
         const db = getFirestore();
         const orders = db.collection('orders');
         const newOrder = {
-            buyer: userInfo,
+            buyer: user,
             items: cart,
             date: firebase.firestore.Timestamp.fromDate(new Date()),
             total: total
         };
         orders.add(newOrder)
         .then(({ id }) => {
-            console.log(id);
             setOrder({ id: id, ...newOrder });
         })
         .catch((error) => {
@@ -54,7 +59,7 @@ export const CartProvider = ({ children }) => {
     };
 
     return(
-        <CartContext.Provider value={ { addProduct, cart, createOrder, order } }>
+        <CartContext.Provider value={ { addProduct, cart, createOrder, order, userData, user } }>
             { children }
         </CartContext.Provider>
     );

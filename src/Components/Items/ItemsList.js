@@ -8,7 +8,6 @@ import { getFirestore } from '../../Firebase';
 const ItemsList = () => {
     const [products, setProducts] = useState([]);
     const [loading, setLoading] = useState(false);
-    const [error, setError] = useState('');
     const { id } = useParams();
 
     useEffect(() => {
@@ -23,12 +22,10 @@ const ItemsList = () => {
                 console.log('No results!');
             }
             setProducts(querySnapShot.docs.map(doc => {
-                console.log(doc.data());
                 return ({id: doc.id, ...doc.data() });
             }));
         }).catch((error) => {
             console.log('Error serching Items', error);
-            setError(error);
         }).finally(() => {
             setLoading(false);
         })

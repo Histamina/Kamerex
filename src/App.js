@@ -8,7 +8,10 @@ import ItemsList from './Components/Items/ItemsList';
 import ItemsListLoading from './Components/Items/ItemDetailContainer';
 import { CartProvider } from './Contexts/cartContext';
 import Cart from './Components/Cart/Cart';
-import Footer from './Components/Footer/Footer'
+import Footer from './Components/Footer/Footer';
+import HottestProducts from './Components/Home/HottestProducts';
+import Checkout from './Components/Checkout/Checkout';
+import OrderDetails from './Components/Checkout/OrderDetails';
 
 function App() {
   return (
@@ -18,17 +21,23 @@ function App() {
           <NavBar />
           <Switch>
             <Route exact path="/">
-              <Greetings range="Tutor" name="JUAN"/>
+              <Greetings range="Mr/Ms" name="PHOTOGRAPHER"/>
+              <HottestProducts />
             </Route>
             <Route exact path="/categories/:id">
               <ItemsList />
             </Route>
             <Route exact path="/products/:id">
-              <ItemsList />
-              {/* <ItemsListLoading /> */}
+              <ItemsListLoading />
             </Route>
             <Route exact path="/cart">
               <Cart />
+            </Route>
+            <Route exact path="/checkout">
+              <Checkout />
+            </Route>
+            <Route exact path="/order">
+              <OrderDetails />
             </Route>
           </Switch>
           <Footer />

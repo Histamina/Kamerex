@@ -10,7 +10,7 @@ const Items = (props) => {
             <div className="row no-gutters justify-content-center">
                 <div className="img-wrapper col-md-4">
                     <img src={lens} className="img-fluid" alt="Lens product background" />
-                    <h2 className="text-center">Our Cameras</h2>
+                    <h2 className="text-center">Our Products</h2>
                 </div>
                 <div className="cameras-wrapper d-flex align-items-center col-md-8">
                     <ul className="row-products p-0 m-0 d-flex justify-content-between">

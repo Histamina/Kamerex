@@ -12,6 +12,7 @@ dependencies:
   popper.js: 1.16.1
   react: 16.13.1
   react-dom: 16.13.1_react@16.13.1
+  react-icons: 3.11.0_react@16.13.1
   react-router-dom: 5.2.0_react@16.13.1
   react-scripts: 3.4.3_node-sass@4.14.1
 lockfileVersion: 5.1
@@ -10113,6 +10114,15 @@ packages:
     dev: false
     resolution:
       integrity: sha512-TAv1KJFh3RhqxNvhzxj6LeT5NWklP6rDr2a0jaTfsZ5wSZWHOGeqQyejUp3xxLfPt2UpyJEcVQB/zyPcmonNFA==
+  /react-icons/3.11.0_react@16.13.1:
+    dependencies:
+      camelcase: 5.3.1
+      react: 16.13.1
+    dev: false
+    peerDependencies:
+      react: '*'
+    resolution:
+      integrity: sha512-JRgiI/vdF6uyBgyZhVyYJUZAop95Sy4XDe/jmT3R/bKliFWpO/uZBwvSjWEdxwzec7SYbEPNPck0Kff2tUGM2Q==
   /react-is/16.13.1:
     dev: false
     resolution:
@@ -12685,5 +12695,6 @@ specifiers:
   popper.js: ^1.16.1
   react: ^16.13.1
   react-dom: ^16.13.1
+  react-icons: ^3.11.0
   react-router-dom: ^5.2.0
   react-scripts: 3.4.3

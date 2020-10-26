@@ -8,7 +8,7 @@ const ItemDetails = (props) => {
     const [itemCount, setItemCount] = useState(1);
 
     return(
-        <div className="container-fluid my-5">
+        <div className="container-fluid content-wrapper-details">
             <div className="row no-gutters justify-content-center">
                 <div className="col-md-10 d-flex justify-content-around">
                     <div className="img-wrapper col-md-6 p-0">
@@ -17,9 +17,9 @@ const ItemDetails = (props) => {
                     <div className="details-wrapper d-flex flex-column col-md-6 text-center justify-content-around">
                         <div className="d-flex flex-column justify-content-between">
                             <h3>{props.name}</h3>
-                            <p className="mx-2">{props.description}</p>
-                            <p className="mb-0">Stock: {props.stock}</p>
-                            <p className="mb-0">Price: {props.price}</p>
+                            <p className="mx-2 mt-3">{props.description}</p>
+                            <p className="mb-0 mt-3">Stock: {props.stock}</p>
+                            <p className="mb-0 mt-3">Price: ${props.price}</p>
                         </div>
                         <div className="d-flex justify-content-around">
                             <div className="d-flex justify-content-around">

@@ -16,9 +16,9 @@ const Footer = () => {
                             <h3 className="footer-text">FIND US</h3>
                         </div>
                         <div className="d-flex col-md-3 text-center my-5 justify-content-around mx-auto">
-                            <a href="https://www.instagram.com/" target="_blank"><Icon path={mdiInstagram} className="instagram-icon" /></a>
-                            <a href="https://web.whatsapp.com/" target="_blank"><Icon path={mdiWhatsapp} className="whatsapp-icon" /></a>
-                            <a href="https://twitter.com/" target="_blank"><Icon path={mdiTwitter} className="twitter-icon" /></a>
+                            <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer"><Icon path={mdiInstagram} className="instagram-icon" /></a>
+                            <a href="https://web.whatsapp.com/" target="_blank" rel="noopener noreferrer"><Icon path={mdiWhatsapp} className="whatsapp-icon" /></a>
+                            <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer"><Icon path={mdiTwitter} className="twitter-icon" /></a>
                         </div>
                     </div>
                 </div>

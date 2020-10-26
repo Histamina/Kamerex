@@ -4,13 +4,15 @@ $second-font: 'Montserrat', sans-serif;
 
 nav {
     p {
-        font-family: ($second-font);
+        font-family: $second-font;
         letter-spacing: 2px;
         font-weight: 600;
     }
     ul {
         text-transform: uppercase;
-        font-family: ($second-font); 
+        font-family: $second-font;
+        font-weight: 500;
+        letter-spacing: 1px;
         a {
             color: #ffffff;
         }

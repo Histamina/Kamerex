@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Bitter:wght@500&family=Montserrat&display=swap');
+$main-font: 'Bitter', serif;
+$second-font: 'Montserrat', sans-serif;
+
+ul {
+    list-style-type: none;
+}
+
+//Back to Home style
+.back-to-home {
+    padding-top: 17vh;
+    padding-bottom: 17vh;
+}
+
+//Cart styles
+.cart-wrapper {
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+    .cart-title {
+        font-family: $main-font;
+        font-size: 3.5rem;
+    }
+    .card-cart-wrapper {
+        .card-title {
+            font-family: $main-font;
+            font-size: 1.5rem;
+        }
+        .card-description, .qty-style, .price-style {
+            font-family: $second-font;
+        }
+    }
+}
+
+//Checkout button style
+.checkout-button {
+    font-family: $second-font;
+    font-size: 1.2rem;
+}

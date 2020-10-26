@@ -1,5 +1,5 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './NavBar.scss';
 import CartIcon from '../Icons/CartIcon';
@@ -10,10 +10,10 @@ import Dropdown from './Dropdown';
 const NavBar = () => {
     return(
         <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
-            <a className="navbar-brand" exact to="/">
+            <Link className="navbar-brand" exact to="/">
                 <img src={obturadorLogo} className="rounded-circle" width="40" height="40" alt="Logo Obturador" loading="lazy" />
                 <p className="d-inline-block mb-0 ml-2">KAMEREX</p>
-            </a>
+            </Link>
             <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span className="navbar-toggler-icon"></span>
             </button>

@@ -2,14 +2,20 @@
 $main-font: 'Bitter', serif;
 $second-font: 'Montserrat', sans-serif;
 
-
-.details-wrapper {
-    background-color: rgb(224, 224, 224);
-    h3 {
-        font-family: ($main-font);
-        font-size: 4rem;
-    }
-    p {
-        font-family: ($second-font);
+.content-wrapper-details {
+    background-image: url("https://i.imgur.com/BlhP6vG.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    padding-top: 15vh;
+    padding-bottom: 15vh;
+    .details-wrapper {
+        background-color: rgb(224, 224, 224);
+        h3 {
+            font-family: ($main-font);
+            font-size: 4rem;
+        }
+        p {
+            font-family: ($second-font);
+        }
     }
 }

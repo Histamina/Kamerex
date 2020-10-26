@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Bitter:wght@500&family=Montserrat&display=swap');
+$main-font: 'Bitter', serif;
+$second-font: 'Montserrat', sans-serif;
+
+//Form 
+.container-form {
+    background-image: url("https://i.imgur.com/sahDD1i.jpg");
+    background-size: 100% 100%;
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+    .form-wrapper {
+        background-color: rgba(187, 187, 187, 0.582);
+        margin: 11vh auto;
+        h2 {
+            font-family: $main-font;
+            font-size: 2.8rem;
+        }
+    }
+}
+
+//End Purchase 
+
+.endpurchase-container {
+    background-image: url("https://i.imgur.com/sahDD1i.jpg");
+    background-size: 100% 100%;
+    padding-top: 27vh;
+    padding-bottom: 27vh;
+    h2 {
+        font-family: $main-font;
+    }
+    .endpurchase-button {
+        font-family: $second-font;
+    }
+}
+
+// Order Details 
+
+.order-container {
+    background-image: url("https://i.imgur.com/sahDD1i.jpg");
+    background-size: 100% 100%;
+    padding-top: 18vh;
+    padding-bottom: 18vh;
+    h3 {
+        font-family: $main-font;
+        font-size: 3rem;
+    }
+    p {
+        font-family: $second-font;
+
+    }
+}
+
+//No Order
+
+.no-order-container {
+    padding-top: 30vh;
+    padding-bottom: 30vh;
+    h3 {
+        font-family: $second-font;
+    }
+}

@@ -7,7 +7,6 @@ import { getFirestore } from '../../Firebase';
 const ItemsListLoading = () => {
     const [product, setProduct] = useState([]);
     const [loading, setLoading] = useState(true);
-    const [error, setError] = useState('');
     const { id } = useParams();
 
     useEffect(() => {
@@ -24,7 +23,6 @@ const ItemsListLoading = () => {
         })
         .catch((error) => {
             console.log("Error searching Item: ", error);
-            setError(error);
         })
         .finally(() => {
             setLoading(false);

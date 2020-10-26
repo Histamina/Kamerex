@@ -1,9 +1,9 @@
 import React, { useContext } from 'react'; 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { CartContext } from '../../Contexts/cartContext';
-import BackToProducts from './BackToProducts';
-import EndPurchase from '../Cart/Orders';
-import OrderData from '../Cart/OrderDetails';
+import GoToCheckout from './GoToCheckout';
+import './Cart.scss';
+import BackToHome from './BackToHome';
 
 const Cart = (props) => {
     const { cart } = useContext(CartContext);
@@ -12,21 +12,21 @@ const Cart = (props) => {
         <>
             { cart.length === 0  ?
 
-                <BackToProducts />
+                <BackToHome />
                 :
-                <div className="container">
+                <div className="container cart-wrapper">
                     <div className="row no-gutters justify-content-center">
-                        <h2 className="text-center mt-5">Products In CART</h2>
-                        <ul className="products-in-cart d-flex mt-5">
+                        <h2 className="text-center mt-5 cart-title">Products In CART</h2>
+                        <ul className="products-in-cart d-flex mt-5 flex-wrap px-0">
                             { cart.map( product => 
                                 <li key={product.id} className="col-md-3">
-                                    <div className="card">
+                                    <div className="card card-cart-wrapper">
                                         <img src={product.img} className="card-img-top img-fluid shadow border" width="100" alt="Camera Product" />
                                         <div className="card-body">
                                             <h5 className="card-title text-center">{product.name}</h5>
-                                            <p className="mx-2">{product.description}</p>
-                                            <span>Quantity: {product.quantity}</span>
-                                            <p className="mx-2">{product.price}</p>
+                                            <p className="card-description">{product.description}</p>
+                                            <span className="qty-style">Quantity: {product.quantity}</span>
+                                            <p className="mx-2 price-style">Price: ${product.price}</p>
                                         </div>
                                     </div>
                                 </li>
@@ -35,8 +35,7 @@ const Cart = (props) => {
                     </div>
                     <div className="container">
                         <div className="row no-gutters flex-column justify-content-between">
-                            <EndPurchase />
-                            <OrderData />
+                            <GoToCheckout />
                         </div>
                     </div>
                 </div>
